@@ -1,82 +1,68 @@
-#*###########################################################################*
+#############################################################################
 #                   Copyright (C) 2015  LinArch                             #
-#									    #
+#									    									#
 #    This program is free software: you can redistribute it and/or modify   #
 #    it under the terms of the GNU General Public License as published by   #
 #    the Free Software Foundation, either version 3 of the License, or      #
-#    (at your option) any later version.				    #
-#									    #
+#    (at your option) any later version.				    				#
+#									    									#
 #    This program is distributed in the hope that it will be useful,        #
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of         #
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          #
-#    GNU General Public License for more details.		            #
-#									    #
+#    GNU General Public License for more details.		            		#
+#									    									#
 #    You should have received a copy of the GNU General Public License      #
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.  #
-#*###########################################################################*
-
-############################################################################*
+#############################################################################
+#############################################################################
 ##             Iranian Arch Users Conky(I.AUC.ver2)                        ##
 ##             Developed By:          LinArcX                              ##
-##	       Visit Me:           www.stack.blog.ir                       ##
+##	       	   Visit Me:           www.stack.blog.ir                       ##
 ##             Visit Us:          www.bbs.archusers.ir                     ##
 ##             Conky-Tut: http://conky.sourceforge.net/documentation.html  ##
 ##             Lua-Tut:    http://www.tutorialspoint.com/lua/index.htm     ##
-############################################################################*
-
+#############################################################################
 ## I.AUC contain 5 Seprated Parts.according to your Need, Use Theme And Enjoy!!
 ## This Is : "ArchInfo"
-
 ##################################
 ##   Pre-Defined Variables      ##
 ##################################
-# Conky settings #
-#background no
--- update_interval 2
--- cpu_avg_samples 2
--- net_avg_samples 2
--- override_utf8_locale yes
--- double_buffer yes
--- no_buffers yes
--- text_buffer_size 2048
--- #imlib_cache_size 0
--- temperature_unit celsius
-
-# Window specifications # 
+update_interval 2
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+#imlib_cache_size 0
+temperature_unit celsius
+# Window specifications
 own_window yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_argb_visual yes
 own_window_argb_value 0
 own_window_transparent yes
 own_window_type desktop
-# Window specifications #
-
 default_color DDF2FF
 draw_borders no
 #border_margin 2
 draw_graph_borders yes
 draw_outline no
 draw_shades no
-
 alignment top_right
 gap_x -20
 gap_y 34
-
 # Text settings #
 use_xft yes
 xftfont DroidSans:size=8.75
 xftalpha 0.1
 uppercase no
-
-## Add spaces to keep things from moving around?
-## Only affects certain objects.
-#use_spacer right
-#####
 ## Load Lua for shading (optional)
 ## Set the path to your script here.
 lua_load ~/.conky/ArchConky/Lua/draw_bg.lua
 lua_draw_hook_pre draw_bg
-
+# lua_load ~/.conky/ArchConky/Lua/bargraph_small.lua
+# lua_draw_hook_post main_ba
 # color defs - change as required
 color0 White		#FFFFFF
 color1 Ivory		#FFFFF0
@@ -88,14 +74,12 @@ color6 Gray		#7E7E7E
 color7 AntiqueWhite4	#8B8378
 color8 DimGray		#696969
 color9 Tomato		#FF6347
-
 #own_window_colour 000000
 minimum_size 360 350
 #maximum_width 260
-
 TEXT
 ##################################
-##         Pacman Info            ##
+##         Pacman Info          ##
 ##################################
 ${voffset 282}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}Pacman Info${offset 8}${color8}${voffset -2}${hr 2}${font}
 ${voffset 5}${font StyleBats:size=10}${color1}u${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Core${alignr}${font DroidSans:size=8.3}${goto 145}${exec paclist core | wc -l

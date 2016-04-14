@@ -14,7 +14,6 @@
 #    You should have received a copy of the GNU General Public License      #
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.  #
 #############################################################################
-
 #############################################################################
 ##             Iranian Arch Users Conky(I.AUC.ver2)                        ##
 ##             Developed By:          LinArcX                              ##
@@ -23,76 +22,64 @@
 ##             Conky-Tut: http://conky.sourceforge.net/documentation.html  ##
 ##             Lua-Tut:    http://www.tutorialspoint.com/lua/index.htm     ##
 ############################################################################*
-
 ## I.AUC contain 5 Seprated Parts.according to your Need, Use Theme And Enjoy!!
 ## This Is : "Arch"
-
-
 ##################################
 ##   Pre-Defined Variables      ##
 ##################################
-# update_interval 2   
-# cpu_avg_samples 2
-# net_avg_samples 2
-# override_utf8_locale yes
-# double_buffer yes
-# no_buffers yes
-# text_buffer_size 2048
-# imlib_cache_size 0
-# temperature_unit celsius
-
-# Window specifications #
+update_interval 2   
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+imlib_cache_size 0
+# Window specifications
 own_window yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_argb_visual yes
 own_window_argb_value 0 
 own_window_transparent yes
 own_window_type desktop
-# Window specifications #
-
+default_color DDF2FF
+draw_borders no
+#border_margin 2
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+# Alignment
 alignment tl
 gap_x 4
 gap_y 34
-
-# Text settings #
+# Text settings
 use_xft yes
 xftfont DroidSans:size=8.75
 xftalpha 0.1
 uppercase no
-
-# color defs - change as required #s
+# Colors
 color0 White			#FFFFFF
 color1 Ivory			#FFFFF0
 color2 Ivory2			#EEEEE0
 color3 Ivory3			#CDCDC1
-color4 1793d1			#0b79ac
 color5 Tan2		    	#EE9A49
 color6 Gray		    	#7E7E7E
 color7 AntiqueWhite4	#8B8378
 color8 DimGray			#696969
 color9 Tomato			#FF6347
-
-#####
-## Load Lua for shading (optional)
-## Set the path to your script here.
+# Lua
 lua_load ~/.conky/ArchConky/Lua/draw_bg.lua
 lua_draw_hook_pre draw_bg
-
-####
-## Load Lua for bargraphs (required)
-## Set the path to your script here.
 lua_load ~/.conky/ArchConky/Lua/bargraph_small.lua
 lua_draw_hook_post main_bars
-
-minimum_size 250 380
 #maximum_width 260
-#own_window_colour 000000
+minimum_size 250 380
 TEXT
 ##################################
 ##           Version            ##
 ##################################
 ${voffset 0}${font StyleBats:size=10}${color1}${font DroidSans:bold:size=8}${color4}About Us${offset 8}${color8}${voffset -2}${hr 2}${font}
-${voffset 2}${alignc}${font Caviar Dreams:size=9}${color green}Iranian . ${color white}ArchUsersConky(AUC) . ${color red} ver2
+${voffset 2}${alignc}${font Caviar Dreams:size=9}${color green}Iranian . ${color white}ArchUsersConky(AUC) . ${color red} ver3
 ${voffset 2}${font Caviar Dreams:size=8.3}${color3}Designed By:${goto 120}${font Zekton:size=8.3}${alignr}LinArcX
 ##################################
 ##            SYSTEM            ##
@@ -111,7 +98,7 @@ ${voffset 1}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:siz
 ${voffset 2}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8.25}${color4}VGA${offset 8}${color8}${voffset -2}${hr 2}${font}
 ${voffset 2}${font StyleBats:size=10}${color3}A${voffset -1}${font DroidSans:size=8.4}${color3}${offset 5}${execi 30 source Scripts/Scripts.sh;showVGAmodel}${alignr}${font DroidSans:size=8.3}${freq_g cpu}${offset 1}GHz
 ${voffset 2}${font StyleBats:size=10}A${voffset -1}${font DroidSans:size=8.4}${offset 5}Prime:${alignr}${execi 30 source Scripts/Scripts.sh;whichGraphicCard}
-${voffset 2}${font StyleBats:size=10}${color3}A${voffset -1}${font DroidSans:size=8.4}${color3}${offset 5}VGA's:${alignr}${execi 30 source Scripts/Scripts.sh;showVGA}${voffset 2}
+${voffset 2}${font StyleBats:size=10}${color3}A${voffset -1}${font DroidSans:size=8.4}${color3}${offset 5}VGAs:${alignr}${execi 30 source Scripts/Scripts.sh;showVGA}${voffset 2}
 ${voffset 0}${font StyleBats:size=10}${color3}A${voffset -1}${font DroidSans:size=8.4}${color3}${offset 5}Installed Drivers:${alignr}${execi 30 source Scripts/Scripts.sh;showInstalledVGADrivers}
 ##################################
 ##          PROCESSORS          ##
