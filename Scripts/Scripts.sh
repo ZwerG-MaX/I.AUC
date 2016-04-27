@@ -282,6 +282,6 @@ whichInterface()
 {
 	interface=$(ifconfig | grep "RUNNING" | grep "BROADCAST" | awk '{print $(1F)}' | cut -d":" -f1)
 	# echo "export INTERFACE=$interface" >> ~/.bashrc
-	sed -i -- "s/wlp3s0/$interface/g" "../Arch"
+	sed -i -- "s/wlp3s0/$interface/g" "../.conkyrc"
 
 }

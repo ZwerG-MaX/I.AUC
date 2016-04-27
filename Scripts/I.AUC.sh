@@ -52,7 +52,7 @@ function setWireLessInterface ()
 {
 	interface=$(ifconfig | grep "RUNNING" | grep "BROADCAST" | awk '{print $(1F)}' | cut -d":" -f1)
 	$(notify-send "Your Interface is:$interface") &
-	sed -i -- "s/wlp3s0/$interface/g" "../Arch"
+	sed -i -- "s/wlp3s0/$interface/g" "../.conkyrc"
 }
 
 function setCity ()
