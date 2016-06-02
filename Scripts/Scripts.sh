@@ -191,6 +191,106 @@ day6 ()
 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==6'
 }
 
+procName1 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==5' | awk -F ' ' '{print $11}' 
+}
+
+procName2 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==4' | awk -F ' ' '{print $11}' 
+}
+
+procName3 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==3' | awk -F ' ' '{print $11}' 
+}
+
+procName4 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==2' | awk -F ' ' '{print $11}' 
+}
+
+procName5 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==1' | awk -F ' ' '{print $11}' 
+}
+
+proc1 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==5' | awk -F ' ' '{print $3}' 
+}
+
+proc2 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==4' | awk -F ' ' '{print $3}' 
+}
+
+proc3 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==3' | awk -F ' ' '{print $3}' 
+}
+
+proc4 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==2' | awk -F ' ' '{print $3}' 
+}
+
+proc5 ()
+{
+ps -aux | sort -k3 | tail -6 | awk 'NR==1' | awk -F ' ' '{print $3}' 
+}
+
+allModules ()
+{
+systemctl list-units -t service --all | wc -l 
+}
+
+failedModules ()
+{
+systemctl list-units -t service --failed | wc -l
+}
+
+moduleName1(){
+systemd-analyze blame | awk 'NR==1' | awk -F ' ' '{print $2}' | awk -F '@' '{print $1}'
+}
+
+moduleName2(){
+systemd-analyze blame | awk 'NR==2' | awk -F ' ' '{print $2}' | awk -F '@' '{print $1}'
+}
+
+moduleName3(){
+systemd-analyze blame | awk 'NR==3' | awk -F ' ' '{print $2}' | awk -F '@' '{print $1}'
+}
+
+moduleName4(){
+systemd-analyze blame | awk 'NR==4' | awk -F ' ' '{print $2}' | awk -F '@' '{print $1}'
+}
+
+moduleName5(){
+systemd-analyze blame | awk 'NR==5' | awk -F ' ' '{print $2}' | awk -F '@' '{print $1}'
+}
+
+moduleTime1(){
+systemd-analyze blame | awk 'NR==1' | awk -F ' ' '{print $1}' 
+}
+
+moduleTime2(){
+systemd-analyze blame | awk 'NR==2' | awk -F ' ' '{print $1}' 
+}
+
+moduleTime3(){
+systemd-analyze blame | awk 'NR==3' | awk -F ' ' '{print $1}' 
+}
+
+moduleTime4(){
+systemd-analyze blame | awk 'NR==4' | awk -F ' ' '{print $1}' 
+}
+
+moduleTime5(){
+systemd-analyze blame | awk 'NR==5' | awk -F ' ' '{print $1}' 
+}
+
 miToKm()
 {
 mi=0.62137 km;

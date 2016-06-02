@@ -64,6 +64,7 @@ color0 White		#FFFFFF
 color1 Ivory		#FFFFF0
 color2 Ivory2		#EEEEE0
 color3 Ivory3		#CDCDC1
+color4 1793d1		#0b79ac
 color5 Tan2		#EE9A49
 color6 Gray		#7E7E7E
 color7 AntiqueWhite4	#8B8378
@@ -81,7 +82,7 @@ ${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:siz
 ${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}dhcpcd$alignr ${exec systemctl status dhcpcd.service | grep Active | cut -d" " -f5}
 ${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}mysql$alignr ${exec systemctl status mysqld.service | grep Active | cut -d" " -f5}
 ${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}ufwAuto.timer$alignr ${exec systemctl status ufwAuto.timer  | grep Active | cut -d" " -f5}
-${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}JAVA$alignr ${exec systemctl status java.service | grep Active | cut -d" " -f5}
+${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Bluetooth$alignr ${exec systemctl status bluetooth.service | grep Active | cut -d" " -f5}
 ${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}GDM$alignr ${exec systemctl status gdm.service | grep Active | cut -d" " -f5}
 ${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}UFW$alignr ${exec systemctl status ufw.service | grep Active | cut -d" " -f5}
 ${voffset 1}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}TorStat$alignr ${exec systemctl status tor.service | grep Bootstrap | cut -d" " -f7 | cut -d: -f1 | tail -1}, ${exec systemctl status tor.service | grep Active | cut -d" " -f5}

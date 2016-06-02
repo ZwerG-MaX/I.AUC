@@ -102,3 +102,24 @@ function conky_draw_bg()
 	cairo_surface_destroy(cs)
 	cairo_destroy(cr)
 	end
+
+function conky_drawLine()
+	cairo_set_line_width (cr, 30.0);
+	cairo_set_line_cap  (cr, CAIRO_LINE_CAP_BUTT); /* default */
+	cairo_move_to (cr, 64.0, 50.0); cairo_line_to (cr, 64.0, 200.0);
+	cairo_stroke (cr);
+	cairo_set_line_cap  (cr, CAIRO_LINE_CAP_ROUND);
+	cairo_move_to (cr, 128.0, 50.0); cairo_line_to (cr, 128.0, 200.0);
+	cairo_stroke (cr);
+	cairo_set_line_cap  (cr, CAIRO_LINE_CAP_SQUARE);
+	cairo_move_to (cr, 192.0, 50.0); cairo_line_to (cr, 192.0, 200.0);
+	cairo_stroke (cr);
+
+	/* draw helping lines */
+	cairo_set_source_rgb (cr, 1, 0.2, 0.2);
+	cairo_set_line_width (cr, 2.56);
+	cairo_move_to (cr, 64.0, 50.0); cairo_line_to (cr, 64.0, 200.0);
+	cairo_move_to (cr, 128.0, 50.0);  cairo_line_to (cr, 128.0, 200.0);
+	cairo_move_to (cr, 192.0, 50.0); cairo_line_to (cr, 192.0, 200.0);
+	cairo_stroke (cr);
+	end

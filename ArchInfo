@@ -1,29 +1,31 @@
-#############################################################################
-#                   Copyright (C) 2015  LinArch                             #
-#									    									#
-#    This program is free software: you can redistribute it and/or modify   #
-#    it under the terms of the GNU General Public License as published by   #
-#    the Free Software Foundation, either version 3 of the License, or      #
-#    (at your option) any later version.				    				#
-#									    									#
-#    This program is distributed in the hope that it will be useful,        #
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of         #
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          #
-#    GNU General Public License for more details.		            		#
-#									    									#
-#    You should have received a copy of the GNU General Public License      #
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.  #
-#############################################################################
-#############################################################################
-##             Iranian Arch Users Conky(I.AUC.ver2)                        ##
-##             Developed By:          LinArcX                              ##
-##	       	   Visit Me:           www.stack.blog.ir                       ##
-##             Visit Us:          www.bbs.archusers.ir                     ##
-##             Conky-Tut: http://conky.sourceforge.net/documentation.html  ##
-##             Lua-Tut:    http://www.tutorialspoint.com/lua/index.htm     ##
-#############################################################################
-## I.AUC contain 5 Seprated Parts.according to your Need, Use Theme And Enjoy!!
-## This Is : "ArchInfo"
+#####################################################################################
+#                   Copyright (C) 2015  LinArch                             		#
+#									   									    		#
+#    	This program is free software: you can redistribute it and/or modify   		#
+#    	it under the terms of the GNU General Public License as published by   		#
+#    	the Free Software Foundation, either version 3 of the License, or      		#
+#    	(at your option) any later version.				    						#
+#									    											#
+#    	This program is distributed in the hope that it will be useful,        		#
+#    	but WITHOUT ANY WARRANTY; without even the implied warranty of         		#
+#    	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          		#
+#    	GNU General Public License for more details.		            			#
+#									    											#
+#    	You should have received a copy of the GNU General Public License      		#
+#    	along with this program.  If not, see <http://www.gnu.org/licenses/>.  		#
+#####################################################################################
+#####################################################################################
+#             			Iranian Arch Users Conky(I.AUC.ver2)                        #
+#         Developed By:          								LinArcX             #
+#	      Visit Me:           								www.stack.blog.ir       #
+#         Visit Us:          							   www.bbs.archusers.ir     #
+#         Conky-Tut: 			http://conky.sourceforge.net/documentation.html     #
+#         Lua-Tut:    				http://www.tutorialspoint.com/lua/index.htm     #
+#####################################################################################
+#####################################################################################
+#	I.AUC contain 5 Seprated Parts.according to your Need, Use Theme And Enjoy!! 	#
+# 								This Is : ".conkyrc"								#
+#####################################################################################
 ##################################
 ##   Pre-Defined Variables      ##
 ##################################
@@ -32,97 +34,53 @@ cpu_avg_samples 2
 net_avg_samples 2
 override_utf8_locale yes
 double_buffer yes
-no_buffers yes
 text_buffer_size 2048
-#imlib_cache_size 0
-temperature_unit celsius
-# Window specifications
 own_window yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_argb_visual yes
-own_window_argb_value 0
+own_window_argb_value 0 
 own_window_transparent yes
 own_window_type desktop
 default_color DDF2FF
-draw_borders no
-#border_margin 2
+--draw_borders yes
+--border_margin 2
 draw_graph_borders yes
 draw_outline no
 draw_shades no
-alignment top_right
-gap_x -20
-gap_y 34
-# Text settings #
+alignment tm
+#gap_x 4
+#gap_y 34
 use_xft yes
 xftfont DroidSans:size=8.75
 xftalpha 0.1
 uppercase no
-## Load Lua for shading (optional)
-## Set the path to your script here.
-lua_load ~/.conky/ArchConky/Lua/draw_bg.lua
-lua_draw_hook_pre draw_bg
-# lua_load ~/.conky/ArchConky/Lua/bargraph_small.lua
-# lua_draw_hook_post main_ba
-# color defs - change as required
-color0 White		#FFFFFF
-color1 Ivory		#FFFFF0
-color2 Ivory2		#EEEEE0
-color3 Ivory3		#CDCDC1
-color4 1793d1		#0b79ac
-color5 Tan2		#EE9A49
-color6 Gray		#7E7E7E
-color7 AntiqueWhite4	#8B8378
-color8 DimGray		#696969
-color9 Tomato		#FF6347
-#own_window_colour 000000
-minimum_size 360 350
-#maximum_width 260
+color0 White			
+color1 Ivory			
+color2 Ivory2			
+color3 Ivory3			
+color5 Tan2		    	
+color6 Gray		    	
+color7 AntiqueWhite4	
+color8 DimGray			
+color9 Tomato			
+lua_load ~/.conky/ArchConky/Lua/Line.lua
+lua_draw_hook_pre drawLine
+minimum_size 600 600
 TEXT
 ##################################
-##         Pacman Info          ##
+##           SYSTEM             ##
 ##################################
-${voffset 282}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}Pacman Info${offset 8}${color8}${voffset -2}${hr 2}${font}
-${voffset 5}${font StyleBats:size=10}${color1}u${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Core${alignr}${font DroidSans:size=8.3}${goto 145}${exec paclist core | wc -l
-}${goto 175}${font StyleBats:size=10}${color1}u${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Extra${font DroidSans:size=8.3}${goto 350}${exec paclist extra | wc -l
-}
-${voffset 0}${font StyleBats:size=10}${color1}u${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Community${alignr}${font DroidSans:size=8.3}${goto 145}${exec paclist community | wc -l
-}${goto 175}${font StyleBats:size=10}${color1}u${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Multilib${font DroidSans:size=8.3}${goto 350}${exec paclist multilib | wc -l
-}
-${voffset 0}${font StyleBats:size=10}${color1}u${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Blackarch${alignr}${font DroidSans:size=8.3}${goto 145}${exec paclist blackarch | wc -l
-}${goto 175}${font StyleBats:size=10}${color1}u${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Archlinuxfr${font DroidSans:size=8.3}${goto 350}${exec paclist archlinuxfr | wc -l
-}
-${voffset 0}${font StyleBats:size=10}${color1}u${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Aur${alignr}${font DroidSans:size=8.3}${goto 145}${exec pacman -Qem | wc -l}
-${voffset 5}${font StyleBats:size=10}${color1}v${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Packages${alignr}${font DroidSans:size=8.3}${goto 145}${exec pacman -Q | wc -l}${goto 175}${font StyleBats:size=10}${color1}v${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}APP${font DroidSans:size=8.3}${goto 350}${exec pacman -Qe | wc -l}
-${voffset 0}${font StyleBats:size=10}${color1}Z${voffset -1}${font DroidSans:size=8.65}${color3}${offset 4}Orphans${alignr}${font DroidSans:size=8.3}${goto 145}${exec pacman -Qdttq | wc -l}${goto 175}${font StyleBats:size=10}${color1}Z${voffset -1}${font DroidSans:size=8.65}${color3}${offset 4}N.O.P.I.N.U${font DroidSans:size=8.3}${goto 350}${exec checkupdates | wc -l}
-${voffset 0}${font StyleBats:size=10}${color1}Z${voffset -1}${font DroidSans:size=8.65}${color3}${offset 4}My Aur Helpes${alignr}${font DroidSans:size=8.3}${goto 145}${exec source Scripts/Scripts.sh;myAurHelpers}${goto 175}${font StyleBats:size=10}${color1}Z${voffset -1}${font DroidSans:size=8.65}${color3}${offset 4}Last Update${goto 10}${font XM Yekan:size=8.3}${alignr}${exec cat /var/log/pacman.log | grep Syu | tail -1 | cut -d"[" -f2 | cut -d"]" -f1 | cut -d" " -f1 | tr - / | xargs jdate '+%W' -j|fribidi --ltr}              ${font XM Yekan:size=8.3}${color3}${goto 340}${exec cat /var/log/pacman.log | grep Syu | tail -1 | cut -d"[" -f2 | cut -d"]" -f1 | cut -d" " -f2 | sed  "y/0123456789/۰۱۲۳۴۵۶۷۸۹/"}
-${voffset 0}${font StyleBats:size=10}${color1}9${voffset -1}${font DroidSans:size=8.65}${color3}${offset 4}Next Update${alignr}${font DroidSans:size=8.3}${goto 150}${execi 30 source Scripts/Scripts.sh;nextUpdate}
-##################################
-##         OpenLogos            ##
-##################################
-${voffset 0}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}World Of Gnu/Linux${color8}${voffset -2}${hr 2}${font}
-${voffset 6}${offset 2}${font OpenLogos:size=25}${color3}CPRVWXsdfgmkw${font}
-${voffset 10}${offset 2}${font OpenLogos:size=60}${color3}t${voffset -25}${offset 95}${font OpenLogos:size=50}${color3}B${font}${voffset -30}${offset 85}${font OpenLogos:size=50}${color3}U
-${voffset -45}${offset 105}${font C39HrP48DhTt:size=35}${color3}KEEP IT SIMPLE STUPID
-##################################
-##         Net-Stat             ##
-##################################
-${voffset -25}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}NetStat${color8}${voffset -2}${hr 2}${font}
-${voffset 3}${font StyleBats:size=10}${color1}${voffset -1}${font DroidSans:size=8.65}${color3}${offset 0}${exec netstat -e -p -t | grep ESTABLISHED | cut -c45-68,80-86,102-140}
-#${alignr} ${tcp_portmon 1 32767 lservice 2}
-##################################
-##              RSS             ##
-##################################
-#list Of Rss Feeds:
-#1-http://rss.slashdot.org/Slashdot/slashdotMain
-#2-http://www.zoomit.ir/feed
-#3-http://www.shahrekhabar.com/rss.jsp?type=6
-#4-http://gadgetnews.ir/feed/
-#5-https://www.archlinux.org/feeds/packages/
-#6-http://www.computerworld.com/news/index.rss
-#7-http://www.cnet.com/rss/gaming/
-#8-http://www.cnet.com/rss/how-to/
-#9-http://www.cnet.com/rss/news/
-#${voffset 380}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}Last News${color8}${voffset -2}${hr 2}${font}
-#${voffset 0}${color3}${font DroidSans:size=8.8}${rss http://www.computerworld.com/news/index.rss 10 item_titles 10 }
+${voffset 125}${offset 103}${font OpenLogos:size=12}${color3}B${font DroidSans:size=8.6}${color3}${offset 3}${sysname}${offset 3}${kernel}${goto 212}${font DroidSans:size=8.3}${machine}${font}
+${voffset 5}${offset 100}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}DE${goto 195}$DESKTOP_SESSION
+${voffset 5}${offset 97}${font StyleBats:size=10}${color1}E${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}QT/GTK${goto 210}$QT_STYLE_OVERRIDE${font}
+${voffset 5}${offset 93}${font StyleBats:size=10}${color1}z${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}User${goto 200}$USER
+${voffset 5}${offset 89}${font StyleBats:size=10}${color3}q${voffset -1}${font DroidSans:size=8.6}${color3}${offset 5}System${offset 3}Uptime${goto 190}${font DroidSans:size=8.3}${uptime_short}${font}
+${voffset 5}${offset 85}${font StyleBats:size=10}${color3}2${font DroidSans:size=8.6}${color3}${offset 5}Temp$alignc${goto 185}${font DroidSans:size=8.3}${hwmon 0 temp 1}°C${offset 1}-${hwmon 1 temp 1}°C${font}
+${voffset 5}${offset 85}${font StyleBats:size=10}${color1}G${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Bios/Uefi${goto 180}${font DroidSans:size=8.3}${exec [ -d /sys/firmware/efi ] && echo UEFI || echo BIOS}
+${voffset -110}${offset 253}${font StyleBats:size=10}${color1}5${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Lang${goto 350}$LANG
+${voffset 5}${offset 257}${font StyleBats:size=10}${color1}E${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Display${goto 370}$DISPLAY
+${voffset 5}${offset 261}${font StyleBats:size=10}${color1}S${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Shell${goto 350}$SHELL
+${voffset 5}${offset 265}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Your Arch Age
+${voffset 5}${offset 290}${execi 30 source Scripts/Scripts.sh;dayDiff}
 
 
