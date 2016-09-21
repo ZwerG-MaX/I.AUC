@@ -142,7 +142,7 @@ ${execi 5 python2 /home/saeed/.conky/ArchConky/Scripts/nowPlaying.py -c /tmp/cov
 ##################################
 ##        	NETWORK	     	    ##
 ##################################
-${voffset 5}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}NETWORK${offset 8}${color8}${voffset -2}${hr 2}${font}
+#${voffset 5}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}NETWORK${offset 8}${color8}${voffset -2}${hr 2}${font}
 #${voffset 0}${font StyleBats:size=10}${color1}g${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Mac${goto 120}${font DroidSans:size=8.3}${alignr}${wireless_ap wlp3s0}
 #${voffset 0}${font StyleBats:size=10}${color1}a${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}ESSID${goto 120}${font DroidSans:size=8.3}${alignr}${wireless_essid wlp3s0}
 #${voffset 0}${font StyleBats:size=10}${color1}n${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}BitRate${goto 120}${font DroidSans:size=8.3}${alignr}${wireless_bitrate wlp3s0}
