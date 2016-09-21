@@ -116,8 +116,8 @@ ${voffset 4}${font XM Yekan:size=20}${alignc}${exec jdate +%W|grep -o --color=ne
 ##################################
 ##         Net-Stat             ##
 ##################################
-${voffset -15}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}NetStat${color8}${voffset -2}${hr 2}${font}
-${voffset 3}${font StyleBats:size=10}${color1}${voffset -1}${font DroidSans:size=8.65}${color3}${offset 0}${exec netstat -e -p -t | grep ESTABLISHED | cut -c45-68,80-86,102-140}
+#${voffset -15}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}NetStat${color8}${voffset -2}${hr 2}${font}
+#${voffset 3}${font StyleBats:size=10}${color1}${voffset -1}${font DroidSans:size=8.65}${color3}${offset 0}${exec netstat -e -p -t | grep ESTABLISHED | cut -c45-68,80-86,102-140}
 #${alignr} ${tcp_portmon 1 32767 lservice 2}
 ##################################
 ##              RSS             ##
@@ -132,7 +132,8 @@ ${voffset 3}${font StyleBats:size=10}${color1}${voffset -1}${font DroidSans:size
 #7-http://www.cnet.com/rss/gaming/
 #8-http://www.cnet.com/rss/how-to/
 #9-http://www.cnet.com/rss/news/
-#${voffset 380}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}Last News${color8}${voffset -2}${hr 2}${font}
-#${voffset 0}${color3}${font DroidSans:size=8.8}${rss http://www.computerworld.com/news/index.rss 10 item_titles 10 }
+#10-http://lxer.com/module/newswire/headlines.rss
+#${voffset -15}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8}${color4}Last News${color8}${voffset -2}${hr 2}${font}
+#${voffset 5}${color3}${font DroidSans:size=8.8}${rss http://www.linuxinsider.com/perl/syndication/rssfull.pl 10 item_titles 15 }
 
 
