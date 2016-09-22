@@ -52,7 +52,7 @@ draw_shades no
 minimum_size 360 360
 maximum_width 130
 alignment tr
-gap_x 230
+gap_x 233
 #gap_y 100
 # Text settings #
 use_xft yes
