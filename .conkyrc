@@ -89,18 +89,19 @@ ${voffset 3}${font StyleBats:size=9.9}${color3}a${voffset -2}${font DroidSansFal
 ${voffset 3}${font StyleBats:size=9.9}${color3}a${voffset -2}${font DroidSansFallback:size=8.3}${color3}${offset 4}D:${goto 95}${font DroidSans:size=8.3}${fs_used /mnt/D}${goto 133}/${offset 5}${fs_size /mnt/D}${alignr}${voffset 7}${fs_free_perc /mnt/D}%${font}
 ##################################
 ##            SYSTEM            ##
-##################################
+##################################QT_STYLE_OVERRIDE
 ${voffset 2}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8.25}${color4}SYSTEM${offset 8}${color8}${voffset -2}${hr 2}${font}
-${voffset 3}${offset -2}${font OpenLogos:size=12}${color3}B${voffset -4}${font DroidSans:size=8.6}${color3}${offset 3}${sysname}${offset 3}${kernel}${goto 130}${font DroidSans:size=8.3}${machine}${font}${goto 170}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}DE$alignr$DESKTOP_SESSION
-${voffset 2}${font StyleBats:size=10}${color1}E${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}QT/GTK${goto 140}$QT_STYLE_OVERRIDE${font}${goto 170}${font StyleBats:size=10}${color1}z${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}User$alignr $USER
-${voffset 2}${font StyleBats:size=10}${color3}q${voffset -1}${font DroidSans:size=8.6}${color3}${offset 5}System${offset 3}Uptime${goto 130}${font DroidSans:size=8.3}${uptime_short}${font}${goto 170}${font StyleBats:size=10}${color3}2${font DroidSans:size=8.6}${color3}${offset 5}Temp$alignc${alignr 1}${font DroidSans:size=8.3}${hwmon 0 temp 1}°C${offset 1}-${hwmon 1 temp 1}°C${font}
-${voffset 1}${font StyleBats:size=10}${color1}G${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Bios/Uefi${goto 130}${font DroidSans:size=8.3}${exec [ -d /sys/firmware/efi ] && echo UEFI || echo BIOS}${goto 170}${font StyleBats:size=10}${color1}5${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Lang${alignr 1}$LANG
-${voffset 1}${font StyleBats:size=10}${color1}E${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Display${goto 140}$DISPLAY${goto 170}${font StyleBats:size=10}${color1}S${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Shell${alignr 1}$SHELL
-${voffset 1}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Your Arch Age${alignr}${execi 30 source Scripts/Scripts.sh;dayDiff}
+${voffset 3}${offset -2}${font OpenLogos:size=12}${color3}B${voffset -4}${font DroidSans:size=8.6}${color3}${offset 3}${sysname}${offset 3}${kernel}${goto 120}${font DroidSans:size=8.3}${machine}${font}${goto 160}${font StyleBats:size=10}${color1}j${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}User${alignr 1}$USER
+${voffset 2}${font StyleBats:size=10}${color1}E${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}System${offset 3}Uptime${goto 110}${font DroidSans:size=8.3}${uptime_short}${font}${goto 160}${font StyleBats:size=10}${color1}z${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Pager$alignr $PAGER
+${voffset 2}${font StyleBats:size=10}${color3}q${voffset -1}${font DroidSans:size=8.6}${color3}${offset 5}DE/WM${goto 96}$XDG_CURRENT_DESKTOP${font}${goto 160}${font StyleBats:size=10}${color3}2${font DroidSans:size=8.6}${color3}${offset 5}Temp$alignc${alignr 1}${font DroidSans:size=8.3}${hwmon 0 temp 1}°C${offset 1}-${hwmon 1 temp 1}°C${font}
+${voffset 1}${font StyleBats:size=10}${color1}G${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Bios/Uefi${goto 110}${font DroidSans:size=8.3}${exec [ -d /sys/firmware/efi ] && echo UEFI || echo BIOS}${goto 160}${font StyleBats:size=10}${color1}5${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Lang${alignr 1}$LANG
+${voffset 1}${font StyleBats:size=10}${color1}E${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Shell${goto 110}$SHELL${goto 160}${font StyleBats:size=10}${color1}S${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Display${alignr 1}$DISPLAY
+${voffset 1}${font StyleBats:size=10}${color1}b${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}QT.Ver${goto 110}$QT_QPA_PLATFORMTHEME${goto 160}${font StyleBats:size=10}${color1}q${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Editor${alignr 1}$EDITOR
+${voffset 5}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}Your Arch Age${font DroidSans:size=9.5}${goto 110}${execi 30 source Scripts/Scripts.sh;dayDiff}
 ##################################
 ##           Kernel             ##
 ##################################
-${voffset 3}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8.25}${color4}KERNEl${offset 8}${color8}${voffset -2}${hr 2}${font}
+${voffset 1}${font StyleBats:size=10}${color1}t${font DroidSans:bold:size=8.25}${color4}KERNEl${offset 8}${color8}${voffset -2}${hr 2}${font}
 ${voffset 3}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}All Modules: ${alignr}${execi 30 source Scripts/Scripts.sh;allModules}
 ${voffset 1}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}FailedOrInactive Modules:${alignr}${execi 30 source Scripts/Scripts.sh;failedModules}
 ##################################
