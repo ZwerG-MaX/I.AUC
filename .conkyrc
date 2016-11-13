@@ -139,7 +139,7 @@ ${voffset 5}${offset}${#FF6600}Artist :
 ${color}${execi 5 python2 /home/saeed/.conky/ArchConky/Scripts/nowPlaying.py -a}
 ${offset}${#FF6600}Title  : 
 ${color}${execi 5 python2 /home/saeed/.conky/ArchConky/Scripts/nowPlaying.py -t}
-${execi 5 python2 /home/saeed/.conky/ArchConky/Scripts/nowPlaying.py -c /tmp/cover.jpg}${image /tmp/cover.jpg -p 185,555 -s 70x73 -n}
+${execi 5 python2 /home/saeed/.conky/ArchConky/Scripts/nowPlaying.py -c /tmp/cover.jpg}${image /tmp/cover.jpg -p 210,590 -s 75x75 -n}
 ##################################
 ##        	NETWORK	     	    ##
 ##################################
