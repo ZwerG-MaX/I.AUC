@@ -23,7 +23,7 @@
 ##             Conky-Tut:					           ##
 ##             Lua-Tut:                                                    ##
 ############################################################################*
-#!/bin/bash
+#!/bin/zsh
 #to call a function from bash use this pattern:
 #source bashScript.sh;funcName
 #for example:if the script name is service and the function is test so:
@@ -193,27 +193,33 @@ grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep
 
 procName1 ()
 {
-ps -aux | sort -k3 | tail -6 | awk 'NR==5' | awk -F ' ' '{print $11}' 
+F=$(ps -aux | sort -k3 | tail -6 | awk 'NR==5' | awk -F ' ' '{print $11}');
+echo ${F##*/}
 }
 
 procName2 ()
 {
-ps -aux | sort -k3 | tail -6 | awk 'NR==4' | awk -F ' ' '{print $11}' 
+F=$(ps -aux | sort -k3 | tail -6 | awk 'NR==4' | awk -F ' ' '{print $11}');
+echo ${F##*/}
+#echo ${${ps -aux | sort -k3 | tail -6 | awk 'NR==4' | awk -F ' ' '{print $11}'}##*/} ;
 }
 
 procName3 ()
 {
-ps -aux | sort -k3 | tail -6 | awk 'NR==3' | awk -F ' ' '{print $11}' 
+F=$(ps -aux | sort -k3 | tail -6 | awk 'NR==3' | awk -F ' ' '{print $11}');
+echo ${F##*/}
 }
 
 procName4 ()
 {
-ps -aux | sort -k3 | tail -6 | awk 'NR==2' | awk -F ' ' '{print $11}' 
+F=$(ps -aux | sort -k3 | tail -6 | awk 'NR==2' | awk -F ' ' '{print $11}');
+echo ${F##*/}
 }
 
 procName5 ()
 {
-ps -aux | sort -k3 | tail -6 | awk 'NR==1' | awk -F ' ' '{print $11}' 
+F=$(ps -aux | sort -k3 | tail -6 | awk 'NR==1' | awk -F ' ' '{print $11}');
+echo ${F##*/}
 }
 
 proc1 ()

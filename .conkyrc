@@ -130,7 +130,7 @@ ${voffset 3}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:siz
 ${voffset 1}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}${execi 30 source Scripts/Scripts.sh;procName2}${alignr}${execi 30 source Scripts/Scripts.sh;proc2}
 ${voffset 1}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}${execi 30 source Scripts/Scripts.sh;procName3}${alignr}${execi 30 source Scripts/Scripts.sh;proc3}
 ${voffset 1}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}${execi 30 source Scripts/Scripts.sh;procName4}${alignr}${execi 30 source Scripts/Scripts.sh;proc4}
-${voffset 1}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}${execi 30 source Scripts/Scripts.sh;procName5}${alignr}${execi 30 source Scripts/Scripts.sh;proc5}
+${voffset 1}${font StyleBats:size=10}${color1}k${voffset -1}${font DroidSans:size=8.65}${color3}${offset 5}${execi 30 source Scripts/Scripts.sh;procName5}${alignr}${execi 10 source Scripts/Scripts.sh;proc5}
 ##################################
 ##        Clementine	        ##
 ##################################
