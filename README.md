@@ -2,7 +2,7 @@
 Monitor Your System With The Powerfull & Customizable Toll: **I.AUC(Iranian Arch Users Conky)**
 
 ## Preview
-!["I.AUC"](http://uupload.ir/files/f6sx_screenshot_from_2017-01-14_21-14-42.png "I.AUC")
+!["I.AUC"](http://uupload.ir/files/9uxw_screenshot_from_2017-01-14_21-17-57.png "I.AUC")
 
 ## Installation
 1. `cd .conky/` 
