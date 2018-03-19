@@ -6,7 +6,7 @@ Monitor Your System With The Powerfull & Customizable Toll: **I.AUC(Iranian Arch
 
 ## Installation
 1. `cd .conky/` 
-2. `git clone https://github.com/stackultraflow/I.AUC.git`
+2. `git clone https://github.com/LinArcX/I.AUC.git`
 3. set executable mode for Scripts.sh in /Scripts direcory.(`chmod +x Scripts.sh`)
 4. initialize it,Set your wireless Interface and Choose your city
 5. Open conky-manager and check every conky you want to show.
